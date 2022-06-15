@@ -41,6 +41,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
 
     @Override
     public int getItemCount() {
+
         return posts.size();
     }
 
@@ -60,14 +61,11 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
         public void bind(Post post) {
             tvDescription.setText(post.getKeyDescription());
             tvUsername.setText(post.getKeyUser().getUsername());
-
             ParseFile keyImage = post.getKeyImage();
+
             if (keyImage != null) {
                 Glide.with(context).load(post.getKeyImage().getUrl()).into(ivImage);
             }
-
         }
     }
-
-
 }
