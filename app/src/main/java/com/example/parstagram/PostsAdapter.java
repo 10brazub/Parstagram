@@ -1,10 +1,12 @@
 package com.example.parstagram;
 
 import android.content.Context;
+import android.content.Intent;
 import android.icu.number.CompactNotation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -41,7 +43,6 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
 
     @Override
     public int getItemCount() {
-
         return posts.size();
     }
 
@@ -56,6 +57,7 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
             tvUsername = itemView.findViewById(R.id.tvUsername);
             ivImage = itemView.findViewById(R.id.ivImage);
             tvDescription = itemView.findViewById(R.id.tvDescription);
+            itemView.setOnClickListener(this::onClick);
         }
 
         public void bind(Post post) {
@@ -67,5 +69,27 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
                 Glide.with(context).load(post.getKeyImage().getUrl()).into(ivImage);
             }
         }
+
+        public void onClick(View view) {
+            int position = getAdapterPosition();
+            if (position != RecyclerView.NO_POSITION) {
+                Post post = posts.get(position);
+                Intent i = new Intent(context, postDetails.class);
+                i.putExtra("PARSE_OBJECT_EXTRA", post);
+                context.startActivity(i);
+            }
+        }
+    }
+
+    // Clean all elements of the recycler
+    public void clear() {
+        posts.clear();
+        notifyDataSetChanged();
+    }
+
+    // Add a list of items -- change to type used
+    public void addAll(List<Post> post) {
+        posts.addAll(post);
+        notifyDataSetChanged();
     }
 }

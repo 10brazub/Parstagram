@@ -10,6 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.FileProvider;
 import androidx.fragment.app.Fragment;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.util.Log;
@@ -18,6 +20,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 import com.example.parstagram.MainActivity;
@@ -77,12 +80,12 @@ public class ComposeFragment extends Fragment {
             }
             ParseUser currentUser = ParseUser.getCurrentUser();
             savePost(description, currentUser, photoFile);
-
             Intent intent = new Intent(getActivity(), MainActivity.class);
             startActivity(intent);
+
+
         });
     }
-
 
     private void launchCamera() {
         // create Intent to take a picture and return control to the calling application
@@ -131,7 +134,6 @@ public class ComposeFragment extends Fragment {
         if (!mediaStorageDir.exists() && !mediaStorageDir.mkdirs()){
             Log.d(TAG, "failed to create directory");
         }
-
         // Return the file target for the photo based on filename
         return new File(mediaStorageDir.getPath() + File.separator + fileName);
     }

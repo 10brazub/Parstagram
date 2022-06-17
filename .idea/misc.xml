@@ -6,12 +6,15 @@
         <entry key="../../../Library/Android/sdk/platforms/android-32/data/res/layout/menu_item.xml" value="0.16742654508611957" />
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1725" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1725" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.29393115942028986" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.37973438207653987" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.3302083333333333" />
+        <entry key="app/src/main/res/layout/activity_post_details.xml" value="0.5369115193684896" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.34427083333333336" />
         <entry key="app/src/main/res/layout/fragment_compose.xml" value="0.3138316578657311" />
         <entry key="app/src/main/res/layout/fragment_posts.xml" value="0.2259963768115942" />
-        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.16691995947315097" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.36111856787158847" />
+        <entry key="app/src/main/res/layout/fragment_profile_fragments.xml" value="0.4782618111994008" />
+        <entry key="app/src/main/res/layout/fragment_profiles.xml" value="0.3909311837579946" />
         <entry key="app/src/main/res/layout/item_post.xml" value="0.3458613046879947" />
         <entry key="app/src/main/res/menu/menu_bottom_navigation.xml" value="0.34322916666666664" />
         <entry key="app/src/main/res/menu/menu_main.xml" value="0.325" />
