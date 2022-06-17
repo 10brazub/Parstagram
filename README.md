@@ -50,6 +50,8 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
+![ezgif com-gif-maker (4)](https://user-images.githubusercontent.com/76754843/174358102-5f6303ac-30aa-4e40-9db4-2ed11cd9ced3.gif)
+
 
 
 ## Credits
