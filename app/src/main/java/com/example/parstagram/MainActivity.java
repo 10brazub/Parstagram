@@ -33,15 +33,12 @@ public class MainActivity extends AppCompatActivity {
             Fragment fragment;
             switch (item.getItemId()) {
                 case R.id.action_home:
-                    // do something here
                     fragment = new PostsFragment();
                     break;
                 case R.id.action_compose:
-                    // do something here
                     fragment = new ComposeFragment();
                     break;
-                case R.id.action_profile:
-                    // do something here
+//                case R.id.action_profile:
                 default:
                     fragment = new ProfileFragment();
                     break;

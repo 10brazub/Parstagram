@@ -1,12 +1,10 @@
 package com.example.parstagram;
 
 import android.util.Log;
-
 import com.parse.ParseClassName;
 import com.parse.ParseFile;
 import com.parse.ParseObject;
 import com.parse.ParseUser;
-
 import java.util.Date;
 
 @ParseClassName("Post")
@@ -49,7 +47,6 @@ public class Post extends ParseObject {
         int DAY_MILLIS = 24 * HOUR_MILLIS;
 
         try {
-//            createdAt.getTime();
             long time = createdAt.getTime();
             long now = System.currentTimeMillis();
 
@@ -73,8 +70,6 @@ public class Post extends ParseObject {
             Log.i("Error:", "getRelativeTimeAgo failed", e);
             e.printStackTrace();
         }
-
         return "";
     }
-
 }

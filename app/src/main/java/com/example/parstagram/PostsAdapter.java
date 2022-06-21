@@ -2,20 +2,15 @@ package com.example.parstagram;
 
 import android.content.Context;
 import android.content.Intent;
-import android.icu.number.CompactNotation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.bumptech.glide.Glide;
 import com.parse.ParseFile;
-
 import java.util.List;
 
 public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> {
@@ -63,8 +58,8 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
         public void bind(Post post) {
             tvDescription.setText(post.getKeyDescription());
             tvUsername.setText(post.getKeyUser().getUsername());
-            ParseFile keyImage = post.getKeyImage();
 
+            ParseFile keyImage = post.getKeyImage();
             if (keyImage != null) {
                 Glide.with(context).load(post.getKeyImage().getUrl()).into(ivImage);
             }
@@ -81,15 +76,9 @@ public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> 
         }
     }
 
-    // Clean all elements of the recycler
+    // Cleans all elements of the recycler
     public void clear() {
         posts.clear();
-        notifyDataSetChanged();
-    }
-
-    // Add a list of items -- change to type used
-    public void addAll(List<Post> post) {
-        posts.addAll(post);
         notifyDataSetChanged();
     }
 }
